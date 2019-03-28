@@ -1,0 +1,11 @@
+#password + .glyphicon {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* Styles for CodePen Demo Only */
+#wrapper {
+ max-width: 500px;
+ margin: auto;
+ padding-top: 25vh;
+}

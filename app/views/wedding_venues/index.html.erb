@@ -1,0 +1,11 @@
+<h1>All Wedding Venues!</h1>
+<%= link_to "Create new Venue", new_wedding_venue_path %>
+<br><br><br><br>
+<ul>
+<br><% @wedding_venues.each do |wedding_venue| %>
+<img src="<%= wedding_venue.img_url %>" style="width:400px;height:300px;">
+<li><%= link_to wedding_venue.name, wedding_venue %></li>
+<li>Location: <%= wedding_venue.location%></li><br><br><br>
+<% end %>
+
+</ul><br><br>

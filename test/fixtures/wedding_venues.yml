@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  cost: 1.5
+  full_bar: MyString
+  guest_accommodation: 1
+  wedding_style: MyString
+
+two:
+  name: MyString
+  location: MyString
+  cost: 1.5
+  full_bar: MyString
+  guest_accommodation: 1
+  wedding_style: MyString

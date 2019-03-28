@@ -1,0 +1,2 @@
+class CatersController < ApplicationController
+end

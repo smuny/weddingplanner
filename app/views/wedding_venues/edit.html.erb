@@ -1,0 +1,28 @@
+<h1>Edit <%= @wedding_venue.name %></h1>
+
+<% if @wedding_venue.errors %>
+<% @wedding_venue.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>
+<% end %>
+
+<ol>
+<%= form_for @wedding_venue do |f| %>
+<li><%= f.label :name %>
+<%= f.text_field :name %></li>
+<li><%= f.label :location %>
+<%= f.text_field :location %></li>
+<li><%= f.label :cost %>
+<%= f.text_field :cost %></li>
+<li><%= f.label :full_bar %>
+<%= f.text_field :full_bar %></li>
+<li><%= f.label :guest_accommodation %>
+<%= f.text_field :guest_accommodation %></li>
+<li><%= f.label :wedding_style %>
+<%= f.text_field :wedding_style %></li>
+<li><%= f.label :img_url %>
+<%= f.text_field :img_url %></li>
+<li>Cater: <%= f.collection_select(:cater_ids, Cater.all, :id, :name) %></li>
+<%= f.submit %>
+<% end %>
+</ol>

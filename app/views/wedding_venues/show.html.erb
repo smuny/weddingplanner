@@ -1,0 +1,29 @@
+<h1><%= @wedding_venue.name %></h1>
+<img src="<%= @wedding_venue.img_url %>" style="width:400px;height:300px;">
+<br><br><br>
+
+<li>Location: <%= @wedding_venue.location%></li>
+<li>Wedding Style: <%= @wedding_venue.wedding_style%></li>
+<li>Cost: <%= @wedding_venue.cost%></li>
+<li>Guest Accomodation: <%= @wedding_venue.guest_accommodation%></li>
+<li>Included Full Bar: <%= @wedding_venue.full_bar%></li>
+<li>Cater Associated:
+  <% @wedding_venue.caters.each do |cater| %>
+
+  <%= cater.name %>
+  <% end %>
+</li><br><br>
+<br><br>
+
+<ol>
+Upcoming Appointments:<br>
+<li><% @wedding_venue.appointments.each do |appointment| %>
+Client: <%= appointment.user.name %><br>
+Date: <%= appointment.date %></li>
+
+<% end %></ol><br><br>
+
+<%= link_to "Back to Venues", wedding_venues_path %><br>
+<%= link_to "Delete #{@wedding_venue.name}", @wedding_venue, method: :delete %><br>
+<%= link_to "Edit #{@wedding_venue.name}", edit_wedding_venue_path %><br><br><br>
+<%= link_to "Delete Appointment", @appointment, method: :delete %>

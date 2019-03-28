@@ -1,0 +1,20 @@
+<h1><%= @user.name %></h1>
+
+<h4>E-mail: <%= @user.email %></h4>
+<h4>Phone Number: <%= @user.phone_number %></h4>
+<br><br><br>
+
+
+
+<ol>  <h4>All Appointments</h4>
+<% @user.appointments.each do |appointment| %>
+<li> Wedding Venue:<%= link_to appointment.wedding_venue.name, appointment.wedding_venue %><br>
+Date: <%= appointment.date %></li><br>
+
+<% end %>
+</ol>
+<br><br>
+<%= link_to "Back to Users", users_path %><br>
+<%= link_to "Add Appointment", new_appointment_path %><br>
+<%= link_to "Edit #{@user.name}", edit_user_path %><br>
+<%= link_to "Delete #{@user.name}", @user, method: :delete %>

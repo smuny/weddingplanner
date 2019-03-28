@@ -1,0 +1,10 @@
+<h1>Add a new Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+Date:
+<%= f.date_field :date %><br><br>
+
+
+Wedding Venue: <%= f.collection_select(:wedding_venue_id, WeddingVenue.all, :id, :name) %>
+<%= f.submit %>
+<% end %>

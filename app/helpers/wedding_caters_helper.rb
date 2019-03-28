@@ -1,0 +1,2 @@
+module WeddingCatersHelper
+end

@@ -1,0 +1,23 @@
+<h1>Edit User</h1>
+
+<% if @user.errors %>
+<% @user.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>
+<% end %>
+
+<ol>
+<%= form_for @user do |f| %>
+<li><%= f.label :name %>
+<%= f.text_field :name %>
+<li><%= f.label :email %>
+<%= f.email_field :email %>
+<li><%= f.label :password %>
+<%= f.password_field :password %>
+<li><%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
+<li><%= f.label :phone_number %>
+<%= f.text_field :phone_number %><br>
+<%= f.submit %>
+<% end %>
+</ol>

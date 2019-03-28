@@ -1,0 +1,7 @@
+<h1>All Appointments</h1>
+
+<% @appointments.each do |appointment| %>
+<%= appointment.date %>
+<% end %>
+
+<%= link_to "New Appointments", new_appointment_path %>

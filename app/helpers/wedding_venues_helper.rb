@@ -1,0 +1,2 @@
+module WeddingVenuesHelper
+end
